@@ -14,7 +14,7 @@ public class ClientRepository {
     public List<Client> getAll() {
         return (List<Client>) clientCrudRepository.findAll();
     }
-    public Optional<Client> getClient(String id){
+    public Optional<Client> getClient(Integer id){
         return clientCrudRepository.findById(id);
     }
     public Client save(Client client){

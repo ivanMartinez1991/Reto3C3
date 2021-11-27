@@ -16,7 +16,7 @@ public class ClientService {
     public List<Client> getAll(){
         return clientRepository.getAll();
     }
-    public Optional<Client> getClient(String idClient) {
+    public Optional<Client> getClient(Integer idClient) {
         return clientRepository.getClient(idClient);
 
     }
@@ -41,7 +41,7 @@ public class ClientService {
         }
         return client;
     }
-    public boolean deleteClient(String id) {
+    public boolean deleteClient(Integer id) {
         Boolean result = getClient(id).map(client -> {
             clientRepository.delete(client);
             return true;

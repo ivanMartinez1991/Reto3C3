@@ -18,7 +18,7 @@ public class ClientController {
         return clientService.getAll();
     }
     @GetMapping("/{idClient}")
-    public Optional<Client> getClient(@PathVariable("idClient") String idClient){
+    public Optional<Client> getClient(@PathVariable("idClient") Integer idClient){
         return clientService.getClient(idClient);
     }
     @PostMapping("/save")
@@ -33,7 +33,7 @@ public class ClientController {
     }
     @DeleteMapping("/{idClient}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable("idClient")String idClient){
+    public boolean delete(@PathVariable("idClient")Integer idClient){
         return clientService.deleteClient(idClient);
     }
 
